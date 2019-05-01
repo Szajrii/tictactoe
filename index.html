@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tictactoe</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.0/spectre.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.0/spectre-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+	<div id="app">
+		<div class="container">	
+			<div class="columns col-gapless">
+				<div class="column col-4  player-score"  >
+					<div class="player-score-details" >Gracz: {{ player() }}</div>
+					<div class="player-score-details " style="font-size: 3rem; " v-html="activePlayerIcon"></div>	
+					
+				</div>
+				<div class="column col-4  board-div" >
+
+					<div class="board margin-a">
+				
+					<!-- <div class="box fa" data-row="0" data-column="0" v-html="playerTurn =='one' ?  circle : exMark" @click= "clickThis(this)"></div> -->
+						<box row="0" column="0" @place-sign="placeSign" index="1" :player="playerTurn" :gameprogress="gameProgress"></box>
+						<box row="0" column="1" @place-sign="placeSign" index="2" :player="playerTurn" :gameprogress="gameProgress"></box>
+						<box row="0" column="2" @place-sign="placeSign" index="3" :player="playerTurn" :gameprogress="gameProgress"></box>
+						<box row="1" column="0" @place-sign="placeSign" index="4" :player="playerTurn" :gameprogress="gameProgress"></box>
+						<box row="1" column="1" @place-sign="placeSign" index="5" :player="playerTurn" :gameprogress="gameProgress"></box>
+						<box row="1" column="2" @place-sign="placeSign" index="6" :player="playerTurn" :gameprogress="gameProgress"></box>
+						<box row="2" column="0" @place-sign="placeSign" index="7" :player="playerTurn" :gameprogress="gameProgress"></box>
+						<box row="2" column="1" @place-sign="placeSign" index="8" :player="playerTurn" :gameprogress="gameProgress"></box>
+						<box row="2" column="2" @place-sign="placeSign" index="9" :player="playerTurn" :gameprogress="gameProgress"></box>
+					</div>
+					<div class="score margin-a">
+						
+							
+						<div style="text-align: center; margin-top: 20%;" @click="newgame" v-if=" playerWon != '' "><button class="btn btn-lg btn-block " >Zacznij nową grę</button></div>	
+					</div>
+				</div>
+				<div class="column col-4 " style="margin-top: 5%;" >
+					<div class="margin-a" style="text-align: center;" v-if="playerWon != ''">Wygrał gracz:  </div>
+					<div class="margin-a" style="text-align: center; font-size: 64px; margin-top: 10%" v-if="playerWon != ''">{{ playerWon }}</div>
+				</div>	
+			</div>
+		
+		
+
+
+		
+	</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+	
+	
+
+
+</body>
+</html>
+
+
+ 
