@@ -4,10 +4,9 @@ You can use the [editor on GitHub](https://github.com/Szajrii/tictactoe/edit/mas
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Kawiarnia - przykładowa strona
+### Tictactoe - gra w kółko i krzyżyk
 
-Prosta strona internetowa dla kawiarni. Zawiera kilka sekcji, w których zawarte są informacje na temat fikcyjnego lokalu. Do produkcji strony wykorzystano HTML 5, CSS 3, Javascript(jquery).
-
+Prosta gra kółko i krzyżyk, którą każdy doskonale zna. Możliwość późniejszego rozwinięcia aplikacji o grę z botem lub połączenie się dwóch graczy z różnych komputerów. Wykorzystane technologie do stworzenia aplikacji to HTML 5, CSS 3, Javascript, framework Vue js.
 Strona dostępna pod adresem: 
 
 https://storage.googleapis.com/mszarek/tictactoe/index.html
